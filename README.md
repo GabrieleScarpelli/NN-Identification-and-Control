@@ -45,8 +45,8 @@ $$
 
 Neural networks approximate both functions:
 
-- $f(q) \rightarrow N_f(q, \vec{c}_f)$  
-- $H(q) \rightarrow N_H(q, \vec{c}_H)$
+$f(q) \rightarrow N_f(q, \vec{c}_f)$  
+$H(q) \rightarrow N_H(q, \vec{c}_H)$
 
 The control law is designed as:
 
