@@ -49,11 +49,8 @@ $$
 f(q) \rightarrow N_f(q, \vec{c}_f ), \quad H(q) \rightarrow N_H(q, \vec{c}_H ) 
 $$
 
-The control law is designed as:
-
-$$
-u = \frac{1}{N_H} \left( -N_f + \dot{q}_{\text{ref}} - k(q - q_{\text{ref}}) \right)
-$$
+The control law is designed as:  
+$u = \frac{1}{N_H} \left( -N_f + \dot{q}_{\text{ref}} - k(q - q_{\text{ref}}) \right)$
 
 ---
 
