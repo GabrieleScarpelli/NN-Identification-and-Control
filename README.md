@@ -45,8 +45,9 @@ $$
 
 Neural networks approximate both functions:
 
-$f(q) \rightarrow N_f(q, \vec{c}_f )$  
-$H(q) \rightarrow N_H(q, \vec{c}_H )$
+$$
+f(q) \rightarrow N_f(q, \vec{c}_f ), \quad H(q) \rightarrow N_H(q, \vec{c}_H ) 
+$$
 
 The control law is designed as:
 
@@ -61,13 +62,15 @@ $$
 The system is a standard two-joint planar robot arm (RR manipulator), modeled as:
 
 $$
-\dot{\vec{\xi}} = J(\vec{q}) \cdot \dot{\vec{q}} = J(\vec{q}) \vec{u}
+\dot{\vec{\xi}} = J(\vec{q}) \dot{\vec{q}} = J(\vec{q}) \vec{u}
 $$
 
-Here, the function to approximate is the Jacobian matrix 
+Here, the function to approximate is the Jacobian matrix
+
 $$
 J(\vec{q}) : \mathbb{R}^2 \rightarrow \mathbb{R}^{2 \times 2}
 $$
+
 making this a multi-output identification problem. The increased input dimensionality requires the RBF network to use **vector-valued Gaussian basis functions**.
 
 ---
