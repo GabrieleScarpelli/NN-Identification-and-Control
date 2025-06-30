@@ -34,7 +34,7 @@ An exploratory input signal $u$ is generated to allow weight vector $\vec{c}$ to
 The unknown system dynamics are:
 
 $$
-\dot{q} = f(q) + H(q) \cdot u
+\dot{q} = f(q) + H(q) u
 $$
 
 Where:
@@ -45,8 +45,8 @@ $$
 
 Neural networks approximate both functions:
 
-$f(q) \rightarrow N_f(q, \vec{c}_f)$  
-$H(q) \rightarrow N_H(q, \vec{c}_H)$
+$f(q) \rightarrow N_f(q, \vec{c}_f )$  
+$H(q) \rightarrow N_H(q, \vec{c}_H )$
 
 The control law is designed as:
 
@@ -61,16 +61,20 @@ $$
 The system is a standard two-joint planar robot arm (RR manipulator), modeled as:
 
 $$
-\dot{\vec{\xi}} = J(\vec{q}) \cdot \dot{\vec{q}} = J(\vec{q}) \cdot \vec{u}
+\dot{\vec{\xi}} = J(\vec{q}) \cdot \dot{\vec{q}} = J(\vec{q}) \vec{u}
 $$
 
-Here, the function to approximate is the Jacobian matrix $J(\vec{q}) : \mathbb{R}^2 \rightarrow \mathbb{R}^{2 \times 2}$, making this a multi-output identification problem. The increased input dimensionality requires the RBF network to use **vector-valued Gaussian basis functions**.
+Here, the function to approximate is the Jacobian matrix 
+$$
+J(\vec{q}) : \mathbb{R}^2 \rightarrow \mathbb{R}^{2 \times 2}
+$$
+making this a multi-output identification problem. The increased input dimensionality requires the RBF network to use **vector-valued Gaussian basis functions**.
 
 ---
 
 ## Documentation
 
-Additional documentation is available (preferably the `.pptx` version, as it contains embedded videos). Note: documentation is currently in Italian only.
+Additional documentation is available. Note: documentation is currently in Italian only, and videos are not playable in `pdf` format.
 
 ---
 
